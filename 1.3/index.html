@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSTI-4SEM-LPAW-Aula 01 | CSS3 Animação: Exemplo 09</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+            .loader{
+                width: 100px;
+                height: 100px;
+                background-size: contain;
+                background-image: url(circular_loader.png);
+                animation-name: loading;
+                animation-duration: 0.5s;
+                animation-timing-function: step-end;
+                animation-iteration-count: infinite;
+                animation-play-state: paused;
+            }
+            #box {
+                border: dotted 1px black;
+                width: 100px;
+                height: 100px;
+            }
+            #box:hover > .loader  {
+                animation-play-state: unset;
+            }
+
+            @keyframes loading {
+                0%,100%{ transform: rotate(0deg);}
+                5%{transform: rotate(10deg);}
+                10%{transform: rotate(20deg);}
+                15%{transform: rotate(35deg);}
+                20%{transform: rotate(45deg);}
+                30%{transform: rotate(75deg);}
+                35%{ transform: rotate(95deg);}
+                40%{ transform: rotate(110deg);}
+                50%{transform: rotate(135deg);}
+                55%{transform: rotate(150deg);}
+                60%{transform: rotate(165deg);}
+                65%{transform: rotate(180deg);}
+                70%{ transform: rotate(195deg);}
+                75%{ transform: rotate(210deg);}
+                80%{ transform: rotate(230deg);}
+                85%{ transform: rotate(250deg);}
+                90%{ transform: rotate(270deg);}
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div class="loader"></div>
+        </div>
+    </body>
+</html>
