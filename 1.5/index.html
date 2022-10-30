@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSTI-4SEM-LPAW-Aula 01 | CSS3 Animação: Exemplo 09</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                background-color: white;
+                font-family: Lato, sans-serif;
+            }
+      
+            .loader {
+                width: 150px;
+                margin: 150px auto 70px;
+                position: relative;
+            }
+      
+            .loader .loading_1 {
+                position: relative;
+                width: 120%;
+                height: 20px;
+                border: 2px solid black;
+                animation: turn 4s linear 1.75s infinite;
+            }
+      
+            .loader:hover .loading_1:before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 0;
+                height: 100%;
+                background-color: red;
+                animation: load 3s linear infinite;
+            }
+      
+            @keyframes load {
+                0% {
+                    width: 0%;
+                }
+      
+                87.5% {
+                    width: 100%;
+                }
+            }
+      
+            @keyframes bounce {
+      
+                0%,
+                100% {
+                    top: 10px;
+                }
+      
+                12.5% {
+                    top: 30px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loader">
+            <div class="loading_1"></div>
+        </div>
+    </body>
+</html>

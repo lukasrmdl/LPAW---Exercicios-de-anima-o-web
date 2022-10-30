@@ -1,0 +1,80 @@
+body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    border: dotted 3px green;
+    width: 120px;
+    height: 130;
+}
+.goblin-left{
+    background-image: url(../img/goblin_left_1.png);
+    background-size: 48px 73px;
+    width:16px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-position: 0px 0px;
+    animation-name: div-sprite;
+    animation-duration:1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+}
+
+@keyframes goingLeft {
+    0%{ transform: rotate(0deg);}
+}
+
+div{
+    background-image: url(../img/goblin_right_1.png);
+    background-size: 48px 73px;
+    width:18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-position: 0px 0px;
+    animation-name: div-sprite;
+    animation-duration:2600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+}
+
+@keyframes div-sprite{
+    0%{background-position: 0px 0px;transform: translateY(4px);}
+    8%{background-image: url(../img/goblin_right_2.png);
+         background-position: 17px 0px;transform: translateY(4px);}
+    16%{background-image: url(../img/goblin_right_3.png);
+        background-position: 33px 0px;transform: translateY(4px);}
+    24%{background-image: url(../img/goblin_right_1.png);
+        background-position: 49px 0px;transform: translateY(4px);}    
+    32%{background-image: url(../img/goblin_right_2.png);
+        background-position: 65px 0px;transform: translateY(4px);}
+    33%{background-image: url(../img/globin_down_1.png);
+        background-position: 65px 0px;transform: translateY(4px);}  
+    41%{background-image: url(../img/goblin_down_2.png);
+        background-position: 65px 16px;transform: translateY(4px);}  
+    49%{background-image: url(../img/goblin_down_3.png);
+        background-position: 65px 32px;transform: translateY(4px);}
+    57%{background-image: url(../img/globin_down_1.png);
+        background-position: 65px 48px;transform: translateY(4px);}  
+    58%{background-image: url(../img/goblin_left_1.png);
+        background-position: 65px 48px;transform: translateY(4px);} 
+    66%{background-image: url(../img/goblin_left_2.png);
+        background-position: 49px 48px;transform: translateY(4px);} 
+    74%{background-image: url(../img/goblin_left_3.png);
+        background-position: 33px 48px;transform: translateY(4px);} 
+    82%{background-image: url(../img/goblin_left_1.png);
+        background-position: 17px 48px;transform: translateY(4px);} 
+    90%{background-image: url(../img/goblin_left_2.png);
+        background-position: 0px 48px;transform: translateY(4px);} 
+    91%{background-image: url(../img/goblin_up_1.png);
+         background-position: 0px 48px;transform: translateY(4px);} 
+    93%{background-image: url(../img/goblin_up_2.png);
+        background-position: 0px 32px;transform: translateY(4px);}
+    96%{background-image: url(../img/goblin_up_3.png);
+        background-position: 0px 16px;transform: translateY(4px);} 
+    100%{background-image: url(../img/goblin_up_1.png);
+        background-position: 0px 0px;transform: translateY(4px);} 
+}
